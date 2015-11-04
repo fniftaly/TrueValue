@@ -1,0 +1,25 @@
+<div ng-controller="mainController" style="width: 50%;margin-left: 10px">
+
+    <header><b>Search by all fields</b>&nbsp;&nbsp;&nbsp;&nbsp;
+        <b><a href="#view1">Search Actors</a></b>&nbsp;&nbsp;&nbsp;&nbsp;
+        <b><a href="#view2">Search Movies</a></b>&nbsp;&nbsp;&nbsp;&nbsp;
+    </header>
+
+    <div style="width:25%; margin-left: 30px" ng-controller="addnewrow">
+        <p>Actor:<input type="text" ng-model="add.actor" class="form-control"/>
+            Movie:<input type="text" ng-model="add.movie" class="form-control"/>
+            Director<input type="text" ng-model="add.director" class="form-control"/><br>
+            <input type="button" ng-click="addNew()" class="btn" value="AddNewData"/>
+        </p> 
+    </div>
+    <p>
+        Search:
+        <input type="text" ng-model="search" placeholder="search by all fields" class="form-control"/>
+    </p>
+    <table class="table">
+        <thead><th>Actor</th><th>Movie</th><th>Director</th></thead>
+        <tr ng-repeat="row in data| filter:search">
+            <td>{{row.name}}</td><td>{{row.movie}}</td><td>{{row.director}}</td>
+        </tr>
+    </table>
+</div>
