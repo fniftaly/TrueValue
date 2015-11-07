@@ -11,7 +11,7 @@ angular.module('reuseable', [])
                     scope.movie = a.movie;
                     scope.director = a.director;
                 },
-                template:"<p>{{actor}} {{movie}} {{direcrot}}</p>"
+                template:"<p>{{actor}} {{movie}} {{director}}</p>"
             }
         });
 
