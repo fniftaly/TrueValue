@@ -1,7 +1,7 @@
 
 'use strict';
 
-var app = angular.module('app', ['ngRoute']);
+var app = angular.module('app', ['ngRoute','reuseable']);
 
         app.config(['$routeProvider',function ($routeProvider) {
 

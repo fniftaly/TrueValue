@@ -4,10 +4,13 @@
         Search:
         <input type="text" ng-model="search" class="form-control" placeholder="search by movie name"/>
     </p>
-    <table class="table">
+<!--    <table class="table">
         <thead><th>Movies</th></thead>
         <tr ng-repeat="row in movies | filter:search">
             <td>{{row.movie}}</td>
         </tr>
-    </table>
+    </table>-->
+    <reuseable ng-repeat="row in movies | filter:search"
+            movie="{{row.movie}}"
+     </reuseable>
 </div>

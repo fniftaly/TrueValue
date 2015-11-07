@@ -5,10 +5,14 @@
         Search:
         <input type="text" ng-model="search" class="form-control" placeholder="search by actor name"/>
     </p>
-    <table class="table">
+<!--    <table class="table">
         <thead><th>Actors</th></thead>
         <tr ng-repeat="row in actors | filter:search" >
             <td>{{row.name}}</td>
         </tr>
-    </table>
+    </table>-->
+<!--reuseable-->
+    <reuseable ng-repeat="row in actors | filter:search"
+            actor="{{row.name}}"
+     </reuseable>
 </div>
